@@ -14,11 +14,23 @@ A Python command-line tool for scraping websites and converting them to Markdown
 
 ## Installation
 
-1. Clone or download this repository
-2. Install dependencies:
+Clone or download this repository, then use either the launcher script (recommended) or a manual install.
+
+### Option 1: Launcher script (recommended)
+
+`web2md.sh` handles setup for you. On first run it creates a virtual environment in `.venv/` and installs the dependencies; later runs start immediately and only reinstall when `requirements.txt` changes.
+
+```bash
+./web2md.sh https://example.com -o output.md
+```
+
+All arguments are passed straight through to `web2md.py`, so you can substitute `./web2md.sh` for `python3 web2md.py` in every example below. Requires `python3` on your `PATH`.
+
+### Option 2: Manual install
 
 ```bash
 pip install -r requirements.txt
+python3 web2md.py https://example.com
 ```
 
 ## Usage
